@@ -1,0 +1,15 @@
+<script>
+  //함수 isPalindrome 정의 (회문처럼 앞뒤가 똑같은지 여부 출력)
+
+  function isPalindrome(text) {
+    splitText = text.split("");
+    for (let i = 0; i < text.length; i++) {
+      if (splitText[i] != splitText[text.length - 1 - i])
+        return "It's not palindrome";
+    }
+    return "It's palindrome";
+  }
+  console.log(isPalindrome("asesa"));
+  console.log(isPalindrome("Asesa"));
+  console.log(isPalindrome("slkfj"));
+</script>
