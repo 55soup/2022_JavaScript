@@ -1,0 +1,31 @@
+<script>
+  let r = new Range(1, 10);
+  console.log(r.start);
+  console.log(r.end);
+  //   function Range(start, end) {
+  //     this.start = start;
+  //     this.end = end;
+  //     this.in = function (value) {
+  //       for (let i = start; i <= end; i++) {
+  //         if (value === i) return true;
+  //         else return false;
+  //       }
+  //     };
+  //   }
+
+  function Range(s, e) {
+    this.start = s;
+    this.end = e;
+    this.in = function (num) {
+      return num >= this.start && num <= this.end;
+    };
+  }
+  Range.prototype.in = function (num) {
+    return num >= this.start && num <= this.end;
+  };
+
+  let b1 = r.in(5); //=> true
+  let b2 = r.in(11); //=> false
+  console.log(b1);
+  console.log(b2);
+</script>

@@ -1,0 +1,20 @@
+<script>
+  //   function average(args) {
+  //     let result = 0;
+  //     for (let i = 0; i < args.length; i++) {
+  //       result += args[i];
+  //     }
+  //     result = result / args.length;
+  //     return result;
+  //   }
+  //   let avg = average([100, 50, 25]);
+  //   console.log(avg);
+
+  function average(arr) {
+    let sum = 0;
+    for (const n of arr) sum += n;
+    return sum / arr.length;
+  }
+  let avg = average([100, 50, 25]);
+  console.log(avg);
+</script>
