@@ -1,0 +1,51 @@
+<script>
+// adhoc하게 객체 생성하기 => 객체리터럴
+// 대량으로 찍어낼 객체 생성하기 => 생성자 함수, 클래스
+
+// Bank 클래스를 생성자 함수랑 prototype 쓰는 형태로 바꾸기
+function Bank(init = 0){
+    this.balance = init;
+}
+Bank.prototype.getBalance = function(){
+    return this.balance;
+}
+Bank.prototype.deposit = function(amount){
+    this.balance += amount;
+}
+Bank.prototype.withdraw = function(amount){
+    if(amount >= this.balance){
+        const left = this.balance;
+        this.balance = 0;
+        return left;
+    }else{
+        this.balance -= amount;
+        return amount;
+    }
+}
+
+// function getSummary(arr){
+//     let max = arr[0]; //초기값은 배열의 첫 번째값.
+//     let min = arr[0];
+//     let sum = 0;
+
+//     for (const num of arr){ //for of로 배열 전체 순회.
+//         if(max < num) max = num; 
+//         if(min > num) min = num;
+//         sum = num;
+//     }
+//     avg = sum / arr.length;
+//     // return{
+//     //     max: max,
+//     //     min: min,
+//     //     avg: avg,
+//     // }
+//     //단축구문
+//     return{
+//         max, min, avg,
+//     }
+// }
+
+// let summary = getSummary([100,50,60]);
+// console.log(summary);
+
+</script>
